@@ -1,0 +1,168 @@
+/* Reset general */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Contenedor principal */
+.contenedorP {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Grid principal */
+.contS {
+    display: grid;
+    grid-template-areas:
+        'texto login'
+        'footer footer';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto 60px;
+    min-height: 100vh;
+}
+
+/* Sección izquierda */
+.cont_iz {
+    grid-area: texto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../img/avatar-gdc81455e8_1280.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 20px;
+    margin-top: 20%;
+    color: #000;
+}
+.subtitle {
+    margin: 20px;
+    margin-left: 40px;
+    font-size: 30px;
+    color: #000;
+}
+
+/* Sección derecha */
+.cont_de {
+    grid-area: login;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont_sub {
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    padding: 30px 20px;
+    box-shadow: 8px 8px 4px 5px gray;
+    background-color: #fff;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logotipo {
+    margin-top: 20px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+    height: 50px;
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+    border: none;
+    border-radius: 9px;
+    color: black;
+    font-weight: bold;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input:hover {
+    background-color: #F05322;
+    color: black;
+}
+
+/* Botón */
+.Ingresar {
+    margin-top: 20px;
+    height: 50px;
+    width: 50%;
+    background-color: #F05322;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Ingresar:hover {
+    background-color: #d9421c;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.final {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Estilo para mensaje de error */
+.error {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsividad (opcional) */
+@media screen and (max-width: 768px) {
+    .contS {
+        grid-template-areas:
+            'texto'
+            'login'
+            'footer';
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 60px;
+    }
+
+    .cont_iz {
+        height: 300px;
+        background-size: contain;
+    }
+
+    .cont_sub {
+        width: 90%;
+    }
+}
